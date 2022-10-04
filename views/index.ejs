@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <fieldset>
+        <form action="/" method="post" autocomplete="off">
+            <input type="text" name = 'city' placeholder="Enter a city" required class="ghost-input"/>
+            <input type="submit" id="submit" value="Get Weather" class="ghost-button" />
+      </form>
+        <!-- this is the ejs template engine -->
+        <% if(weather !== null){%>
+            <p><%= weather %></p>
+            <% }%> <% if(error !== null){%>
+                <p><%= error %></p>
+                <% }%>
+    </fieldset>
+  </div>  
+</body>
+</html>
